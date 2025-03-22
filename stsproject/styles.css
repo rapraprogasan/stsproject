@@ -1,0 +1,588 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #eaf3e2; /* Light green background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #2e7d32; /* Dark green header */
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    box-shadow: 2px 4px rgba(0,0,0,0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section */
+main {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.headline {
+    margin-bottom: 30px;
+}
+
+.headline h2 {
+    font-size: 28px;
+    color: #1b5e20; /* Dark green */
+}
+
+.article-img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.featured-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.topic {
+    flex: 1;
+    max-width: 30%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.topic-img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.topic h3 {
+    color: #2e7d32;
+}
+
+/* Footer */
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .featured-topics {
+        flex-direction: column;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* Category Intro */
+.category-intro {
+    background-color: #e8f5e9; /* Light green background */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.category-intro h2 {
+    color: #2e7d32; /* Dark green */
+}
+
+.category-intro p {
+    color: #333;
+}
+
+/* Articles List */
+.articles-list {
+    margin-bottom: 20px;
+}
+
+.article-item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.article-item .article-img {
+    width: 40%;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+.article-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.article-content h4 {
+    color: #2e7d32; /* Dark green */
+    margin-bottom: 10px;
+}
+
+.article-content p {
+    margin-bottom: 10px;
+}
+
+.article-content .button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #2e7d32;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.article-content .button:hover {
+    background-color: #1b5e20;
+}
+/* Category Intro */
+.category-intro {
+    background-color: #fce4ec; /* Light pink background for GMOs page */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.category-intro h2 {
+    color: #c2185b; /* Dark pink color */
+}
+
+.category-intro p {
+    color: #333;
+}
+
+/* Articles List */
+.articles-list {
+    margin-bottom: 20px;
+}
+
+.article-item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.article-item .article-img {
+    width: 40%;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+.article-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.article-content h4 {
+    color: #c2185b; /* Dark pink color */
+    margin-bottom: 10px;
+}
+
+.article-content p {
+    margin-bottom: 10px;
+}
+
+.article-content .button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #c2185b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.article-content .button:hover {
+    background-color: #880e4f;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #eaf3e2; /* Light green background */
+    margin: 0;
+    padding: 0;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.6s ease-in-out; /* Smooth transition for opacity */
+}
+
+body.loaded {
+    opacity: 1; /* Fully visible when loaded */
+}
+
+/* Text Transition */
+h1, h2, h3, h4, p {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; /* Smooth transition */
+}
+
+body.loaded h1,
+body.loaded h2,
+body.loaded h3,
+body.loaded h4,
+body.loaded p {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide up */
+}
+
+/* Existing Styles */
+header {
+    background-color: #2e7d32; /* Dark green header */
+    color: white;
+    padding: 15px 0;
+}
+/* Button Styles */
+.article-content .button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #2e7d32; /* Dark green background */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease; /* Button transition */
+}
+
+.article-content .button:hover {
+    background-color: #1b5e20; /* Darker green on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    color: #ffffff; /* Optional: Change text color on hover */
+}
+/* Featured Topics */
+.featured-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individual Topic Cards */
+.topic {
+    flex: 1;
+    max-width: 30%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for transform and shadow */
+}
+
+/* Hover Effect for Topic Cards */
+.topic:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.topic-img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.topic h3 {
+    color: #2e7d32; /* Dark green */
+}
+/* Recent Articles */
+.articles-list {
+    margin-bottom: 20px;
+}
+
+/* Individual Article Items */
+.article-item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for transform and shadow */
+}
+
+/* Hover Effect for Article Items */
+.article-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.article-item .article-img {
+    width: 40%;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+.article-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.article-content h4 {
+    color: #2e7d32; /* Dark green */
+    margin-bottom: 10px;
+}
+
+.article-content p {
+    margin-bottom: 10px;
+}
+
+.article-content .button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #2e7d32;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+}
+
+.article-content .button:hover {
+    background-color: #1b5e20; 
+}
+/* Navigation Links */
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px; 
+    transition: color 0.3s ease, background-color 0.3s ease; 
+}
+
+/* Hover Effect for Navigation Links */
+header nav ul li a:hover {
+    text-decoration: underline; /* Underline effect */
+    background-color: rgba(255, 255, 255, 0.2); /* Light translucent background on hover */
+    color: #f4f5f3; /* Change text color on hover */
+}
+/* Advertisement Styles */
+.advertisement {
+    background-color: #f8f8f8; /* Light background for contrast */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Spacing inside the ad */
+    margin: 20px auto; /* Centering the advertisement */
+    text-align: center; /* Center the text inside */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease; /* Transition for hover effect */
+    text-decoration: none;
+}
+
+.advertisement p
+{
+    text-decoration: none;
+    color: purple;
+    display: block;
+}
+
+/* Hover Effect for Advertisement */
+.advertisement:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+/* Advertisement Image */
+.advertisement img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Round corners for the image */
+}
+
+.advertisement img {
+    width: 200px; /* Set the width of the image to 80px */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px 0; /* Add some spacing above and below the image */
+}
+.editorial-staff {
+    background-color: #e8f5e9; /* Light green background */
+    padding: 20px; /* Inner spacing */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px auto; /* Center on the page */
+    width: 80%; /* Width of the section */
+    text-align: center; /* Center text */
+}
+
+.editorial-staff h2 {
+    color: #2e7d32; /* Dark green color for the heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.editorial-staff ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+.editorial-staff li {
+    color: #333; /* Text color */
+    margin: 5px 0; /* Space between list items */
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background-color: #e8f5e9; /* Light green background */
+    padding: 20px; /* Inner spacing */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px auto; /* Center on the page */
+    width: 80%; /* Width of the form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.contact-form label {
+    display: block; /* Each label on a new line */
+    margin-bottom: 5px; /* Space below the label */
+    color: #2e7d32; /* Dark green color */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 97%; /* Full width */
+    padding: 10px; /* Inner spacing */
+    margin-bottom: 15px; /* Space below input */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.contact-form button {
+    background-color: #2e7d32; /* Dark green button */
+    color: white; /* White text */
+    padding: 10px 15px; /* Inner spacing */
+    border-top: 10px; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.contact-form button:hover {
+    background-color: #1b5e20; /* Darker green on hover */
+}
+
+/* Editorial Staff Styles */
+.editorial-staff {
+    margin-top: 20px; /* Space above the editorial staff section */
+}
+
+.editorial-staff h2 {
+    color: #2e7d32; /* Dark green color */
+}
+
+.editorial-staff ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.editorial-staff li {
+    color: #333; /* Text color for staff members */
+}
+.contact p {
+    margin-bottom: 15px; /* Space between paragraphs */
+    color: #333; /* Text color */
+    line-height: 1.6; /* Line height for better readability */
+}
+
+.contact-form {
+    margin-top: 20px; /* Space between intro text and form */
+}
+
+.editorial-staff p {
+    margin-bottom: 10px; /* Space between text and list */
+}
+
+.editorial-staff ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.editorial-staff li {
+    margin-bottom: 5px; /* Space between staff members */
+}
+/* Social Media Section */
+.social-media {
+    margin-top: 40px;
+    text-align: center; /* Centering the text */
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the list items */
+    gap: 20px;
+}
+
+.social-media ul li {
+    display: inline-block;
+}
+
+.social-media ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2e7d32;
+    transition: color 0.3s ease;
+}
+
+.social-media ul li a:hover {
+    color: #1b5e20;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Full height container for vertical centering */
+}
+
+.image-container img {
+    max-width: 150%;
+    height: auto; /* Ensures image is responsive */
+}
